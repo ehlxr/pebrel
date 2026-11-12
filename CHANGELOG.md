@@ -4,20 +4,20 @@ Every release entry is provided in English and Simplified Chinese.
 
 每个版本条目均同时提供英文和简体中文说明。
 
-## 2.5.0 - 2026-11-09
+## 2.5.3 - 2026-11-12
 
 ```text
-PENDING FINAL BUILD  Pebrel-v2.5.0-android-universal-preview.apk
-PENDING FINAL BUILD  Pebrel-v2.5.0-linux-x64-preview.AppImage
-PENDING FINAL BUILD  Pebrel-v2.5.0-linux-x64-preview.deb
-PENDING FINAL BUILD  Pebrel-v2.5.0-linux-x64-preview.tar.gz
-PENDING FINAL BUILD  Pebrel-v2.5.0-macos-arm64-preview.dmg
-PENDING FINAL BUILD  Pebrel-v2.5.0-macos-x64-preview.dmg
-PENDING FINAL BUILD  Pebrel-v2.5.0-relay-manual.tar.gz
-PENDING FINAL BUILD  Pebrel-v2.5.0-windows-arm64-setup.exe
-PENDING FINAL BUILD  Pebrel-v2.5.0-windows-arm64.zip
-PENDING FINAL BUILD  Pebrel-v2.5.0-windows-x64-setup.exe
-PENDING FINAL BUILD  Pebrel-v2.5.0-windows-x64.zip
+PENDING FINAL BUILD  Pebrel-v2.5.3-android-universal-preview.apk
+PENDING FINAL BUILD  Pebrel-v2.5.3-linux-x64-preview.AppImage
+PENDING FINAL BUILD  Pebrel-v2.5.3-linux-x64-preview.deb
+PENDING FINAL BUILD  Pebrel-v2.5.3-linux-x64-preview.tar.gz
+PENDING FINAL BUILD  Pebrel-v2.5.3-macos-arm64-preview.dmg
+PENDING FINAL BUILD  Pebrel-v2.5.3-macos-x64-preview.dmg
+PENDING FINAL BUILD  Pebrel-v2.5.3-relay-manual.tar.gz
+PENDING FINAL BUILD  Pebrel-v2.5.3-windows-arm64-setup.exe
+PENDING FINAL BUILD  Pebrel-v2.5.3-windows-arm64.zip
+PENDING FINAL BUILD  Pebrel-v2.5.3-windows-x64-setup.exe
+PENDING FINAL BUILD  Pebrel-v2.5.3-windows-x64.zip
 ```
 
 ### English
@@ -26,41 +26,176 @@ macOS, Linux, and Android downloads are Preview builds.
 
 #### Added
 
-- Add a Community page to the theme picker for browsing, previewing, and installing community themes.
-- Add `pebrel theme catalog` and `pebrel theme install` for community themes.
-- Add a Plugins page in Settings to install plugins from a folder, enable, disable, and uninstall them.
-- Add `pebrel plugin install`, `list`, `enable`, `disable`, and `uninstall`.
-- Add plugins that bundle or generate themes, with theme library access granted at install and nothing applied automatically.
-- Add Shift+Insert paste on Windows and Linux. ([#814](https://github.com/Kuddev/pebrel/pull/814))
-- Add a Japanese README. ([#872](https://github.com/Kuddev/pebrel/pull/872))
+- Added an option to keep existing PowerShell commands and aliases for `ls`, `ll`, and `dir` on Windows. Set `builtin_ls=0` in `pebrel_settings.txt` and open a new PowerShell tab. Addresses [#549](https://github.com/Kuddev/nebula/issues/549).
 
-#### Fixed
+### 中文
 
-- Fix OpenCode sessions not resuming when no session ID was captured. Addresses [#651](https://github.com/Kuddev/nebula/issues/651).
-- Fix saved Antigravity conversations not resuming. ([#852](https://github.com/Kuddev/pebrel/pull/852))
-- Fix duplicate OpenCode completions and false progress from unreported permission replies.
-- Fix Agent recognition inside multiplexers whose panes cannot be observed.
-- Fix tabs spinning while an interactive SSH login waits for input.
-- Fix idle built-in SSH sessions ending after about a minute of silence. Addresses [#816](https://github.com/Kuddev/nebula/issues/816).
-- Fix stray `PEBREL_PTY` output after JumpServer direct logins. Addresses [#856](https://github.com/Kuddev/nebula/issues/856).
-- Fix panes hanging on remote `rz` and `sz` by cancelling the unsupported ZMODEM session and suggesting scp or SFTP. Addresses [#806](https://github.com/Kuddev/nebula/issues/806).
-- Fix the mouse pointer flickering on every keystroke on Windows. Addresses [#868](https://github.com/Kuddev/nebula/issues/868).
-- Fix wrong CJK glyphs in bold and italic text on Windows. Addresses [#744](https://github.com/Kuddev/nebula/issues/744).
-- Fix file-tree icons showing as missing glyph boxes on macOS. Addresses [#870](https://github.com/Kuddev/nebula/issues/870).
-- Fix Cmd+M not minimizing the window on macOS. ([#814](https://github.com/Kuddev/pebrel/pull/814))
-- Fix application mouse drags being lost when the pointer crosses a pane boundary or leaves the reportable area.
-- Fix mouse-wheel paging in full-screen Pi. ([#854](https://github.com/Kuddev/pebrel/pull/854))
-- Fix editor commands such as `nvim` and `code` suggesting stale history instead of files in the current directory. ([#847](https://github.com/Kuddev/pebrel/pull/847))
-- Fix undeclared plugin Runtime calls reporting success when wrapped in `pcall`.
-- Fix paired LAN and relay connections not being retained on Android. ([#855](https://github.com/Kuddev/pebrel/pull/855))
-- Fix Android terminal input stopping when IME composition starts while viewing tmux history.
-- Fix Android conversation refreshes resetting the reader.
+macOS、Linux 和 Android 下载为预览版。
+
+#### 新增
+
+- 新增选项，在 Windows 上保留 PowerShell 中已有的 `ls`、`ll` 和 `dir` 命令及别名。在 `pebrel_settings.txt` 中设置 `builtin_ls=0`，再打开新的 PowerShell 标签页。对应 [#549](https://github.com/Kuddev/nebula/issues/549)。
+
+### Contributors
+
+<p>
+  <a href="https://github.com/WilliamWang1721"><img src="https://avatars.githubusercontent.com/u/140129782?v=4&amp;s=96" width="48" height="48" alt="WilliamWang1721" title="WilliamWang1721" /></a>
+</p>
+
+Thanks to [WilliamWang1721](https://github.com/WilliamWang1721).
+
+感谢 [WilliamWang1721](https://github.com/WilliamWang1721)。
+
+## 2.5.2 - 2026-11-12
+
+```text
+808228d261b4bcf5026a207a177abe3e0cf72de145b4dc1c5b07d391749869d8  Pebrel-v2.5.2-android-universal-preview.apk
+b692309420b5d568aecad81ed466d6b5005143d0ac9c89544c9f6d93d3da58ed  Pebrel-v2.5.2-linux-x64-preview.AppImage
+be1a5143eaf2e600a6f12fa722d09ce82370ad88aa2a315aaac0195eaf705655  Pebrel-v2.5.2-linux-x64-preview.deb
+3fa0a5d82f00c5383d780398837e72d8f763589df220ec5f603e85ecf4a6ab3c  Pebrel-v2.5.2-linux-x64-preview.tar.gz
+f38b96fa53f9ef2fb412114d43d8f23d5328dc0f2b8f67a9c8964b8d3f04f938  Pebrel-v2.5.2-macos-arm64-preview.dmg
+2dd280700fce518609e21844478ea5525437e9194ce46394998afc8748307f2e  Pebrel-v2.5.2-macos-x64-preview.dmg
+6e17d68151b2a42bf03a6ae3bcaed892f07fa04af68d85dc6ea65747917a4dd1  Pebrel-v2.5.2-relay-manual.tar.gz
+5dd5d1318cb0d4b1e2aaf3f434d27ed1e25b801232c2b3d3c56c75437a5a50f6  Pebrel-v2.5.2-windows-arm64-setup.exe
+2b1e862006fa1585c4becd17c8de121bd08c89db4419adb075ae5abc99f4abec  Pebrel-v2.5.2-windows-arm64.zip
+d9d4f3116d2d006709f442d9d85eea018dcfcb5b093edf887184b8002dc36baf  Pebrel-v2.5.2-windows-x64-setup.exe
+db1f3091bd9d21d717251999bd0992575966bbdd5901a79b191788527d60dc12  Pebrel-v2.5.2-windows-x64.zip
+```
+
+### English
+
+macOS, Linux, and Android downloads are Preview builds.
 
 #### Improved
 
-- Improve sidebar mode with a centered hover grip for moving panes and the active pane name centered in the title area.
-- Improve fresh Android installs by defaulting to MintLight while keeping saved themes.
-- Improve the Android SSH overflow menu icon with solid dots.
+- Improved file and folder completion in large directories so suggestions appear sooner. ([#914](https://github.com/Kuddev/pebrel/pull/914))
+
+### 中文
+
+macOS、Linux 和 Android 下载为预览版。
+
+#### 改进
+
+- 改进大目录中的文件和文件夹补全，减少等待建议的时间。 ([#914](https://github.com/Kuddev/pebrel/pull/914))
+
+### Contributors
+
+<p>
+  <a href="https://github.com/not-exist"><img src="https://avatars.githubusercontent.com/u/121529946?v=4&amp;s=96" width="48" height="48" alt="not-exist" title="not-exist" /></a>
+</p>
+
+Thanks to [not-exist](https://github.com/not-exist).
+
+感谢 [not-exist](https://github.com/not-exist)。
+
+## 2.5.1 - 2026-11-12
+
+```text
+f2408729588ff766c2f3fd18775a46754b63ae93cc07ce1ec999a442f1d1226a  Pebrel-v2.5.1-android-universal-preview.apk
+bb7e2437d209f0b7fe0e1a44ec7ade4f358e59760511c1f99501ce832d807c0d  Pebrel-v2.5.1-linux-x64-preview.AppImage
+32f5af60360b247103bf7b28aaabcdfec27e244023d22066cb3a4c28ff960252  Pebrel-v2.5.1-linux-x64-preview.deb
+0582bfe7d1ccda7d8adf49f87285e9a1094804bbc19a88e9010bf6339c214891  Pebrel-v2.5.1-linux-x64-preview.tar.gz
+250d4ce30842696d88bb06bd2ebad8ec227245f1cc7b04698133f7de12c0f4c2  Pebrel-v2.5.1-macos-arm64-preview.dmg
+0b2b50cd7a4eac12653e062ccc23bc0d494734302d7d9efa8e852113a20afb8f  Pebrel-v2.5.1-macos-x64-preview.dmg
+6ce94a3eba4fa3b92cf5d587fc6ba07d12dc1ee9279b3882c512657dc0a72ee6  Pebrel-v2.5.1-relay-manual.tar.gz
+446af533d29e4fcdf7111b73ac9265cc4c20f5abab6a252f62d9da6183d3657b  Pebrel-v2.5.1-windows-arm64-setup.exe
+7311ed7c46bf0d160d11794a7f71927515c33680a80464256ef45f7bc04e577b  Pebrel-v2.5.1-windows-arm64.zip
+2a0b209e3f63942fe1f60ebf9b2e5d7be7ec87b63b2fc147b370b650d207a51f  Pebrel-v2.5.1-windows-x64-setup.exe
+aeabe89f422c6b23ce10b79d873dc42386699fb921cba7f653f00094b1ce85cd  Pebrel-v2.5.1-windows-x64.zip
+```
+
+### English
+
+macOS, Linux, and Android downloads are Preview builds.
+
+#### Fixed
+
+- Fixed keymap errors when clicking the prompt in remote Bash 5.0 and 5.1 sessions by disabling click-to-position on those versions. Native completion remains available. Addresses [#897](https://github.com/Kuddev/nebula/issues/897).
+
+### 中文
+
+macOS、Linux 和 Android 下载为预览版。
+
+#### 修复
+
+- 修复在远端 Bash 5.0 和 5.1 的提示符中点击时报按键映射错误的问题：这些版本停用点击定位，原生补全仍可用。对应 [#897](https://github.com/Kuddev/nebula/issues/897)。
+
+### Contributors
+
+<p>
+  <a href="https://github.com/Kuddev"><img src="https://avatars.githubusercontent.com/u/292709043?v=4&amp;s=96" width="48" height="48" alt="Kuddev" title="Kuddev" /></a>
+</p>
+
+Thanks to [Kuddev](https://github.com/Kuddev).
+
+感谢 [Kuddev](https://github.com/Kuddev)。
+
+## 2.5.0 - 2026-11-12
+
+```text
+647a8b7ae2756522102fa61b3b96b5f0de1bfb13980b79df7c593db947731abd  Pebrel-v2.5.0-android-universal-preview.apk
+5556a585679e1c5a3704b032b48ffea3492cdafbbbd98201962b61b21c386846  Pebrel-v2.5.0-linux-x64-preview.AppImage
+0471c7e7e7590b4b65ddd448811084c9cf5d6ee8b99fc1fa03dff4efe5eea48e  Pebrel-v2.5.0-linux-x64-preview.deb
+8011c4fd175588aea5c3ee5562c37ef0defe870ea5f062a7108671033e74a523  Pebrel-v2.5.0-linux-x64-preview.tar.gz
+0e2a952d494967ba1f29db0f99065c5e0d2e864a21ab9001a73b34f6163e869f  Pebrel-v2.5.0-macos-arm64-preview.dmg
+bf26dfe5d2dd27b6244e88a728e528a2cd7387d7e2d0c705a954e020d3f042bd  Pebrel-v2.5.0-macos-x64-preview.dmg
+7f5aff8b0daa8bb85473caa09d5a44e1027f93f399e46aad40e8ea8d1301f978  Pebrel-v2.5.0-relay-manual.tar.gz
+449354b0c70a6710220b534f6722b02e5eb5f933a0e47372186ae0ff4c257b9a  Pebrel-v2.5.0-windows-arm64-setup.exe
+42d87a8de467adc86a5ee8a6a96e098971b05936f162bf0e7810c65dba98bbca  Pebrel-v2.5.0-windows-arm64.zip
+afc16099d82cc3e5cdc76dc7d98d0c65e26b6a06daa44cdeefed7bec9da25a5c  Pebrel-v2.5.0-windows-x64-setup.exe
+8c7c87d245a60efa9ebd71e26ae3f40a06c3f4ee8c4c69b665f9b2e50e6a1431  Pebrel-v2.5.0-windows-x64.zip
+```
+
+### English
+
+macOS, Linux, and Android downloads are Preview builds.
+
+#### Added
+
+- Added a Community page to the theme picker for browsing, previewing, and installing community themes.
+- Added `pebrel theme catalog` and `pebrel theme install` for community themes.
+- Added a Plugins page in Settings to install plugins from a folder, enable, disable, and uninstall them.
+- Added `pebrel plugin install`, `list`, `enable`, `disable`, and `uninstall`.
+- Added plugins that bundle or generate themes, with theme library access granted at install and nothing applied automatically.
+- Added Shift+Insert paste on Windows and Linux. ([#814](https://github.com/Kuddev/pebrel/pull/814))
+- Added a Japanese README. ([#872](https://github.com/Kuddev/pebrel/pull/872))
+
+#### Fixed
+
+- Fixed saved AI sessions failing to resume when no session ID was captured. Addresses [#651](https://github.com/Kuddev/nebula/issues/651).
+- Fixed resuming saved AI conversations from their stored launch information. ([#852](https://github.com/Kuddev/pebrel/pull/852))
+- Fixed duplicate AI completion notices and false progress from unreported permission replies.
+- Fixed Agent recognition inside multiplexers whose panes cannot be observed.
+- Fixed tabs spinning while an interactive SSH login waits for input.
+- Fixed idle built-in SSH sessions ending after about a minute of silence. Addresses [#816](https://github.com/Kuddev/nebula/issues/816).
+- Fixed direct SSH gateway logins printing internal `PEBREL_PTY` output. Addresses [#856](https://github.com/Kuddev/nebula/issues/856).
+- Fixed panes hanging on remote `rz` and `sz` by cancelling the unsupported ZMODEM session and suggesting scp or SFTP. Addresses [#806](https://github.com/Kuddev/nebula/issues/806).
+- Fixed the mouse pointer flickering on every keystroke on Windows. Addresses [#868](https://github.com/Kuddev/nebula/issues/868).
+- Fixed wrong CJK glyphs in bold and italic text on Windows. Addresses [#744](https://github.com/Kuddev/nebula/issues/744).
+- Fixed file-tree icons showing as missing glyph boxes on macOS. Addresses [#870](https://github.com/Kuddev/nebula/issues/870).
+- Fixed Cmd+M not minimizing the window on macOS. ([#814](https://github.com/Kuddev/pebrel/pull/814))
+- Fixed application mouse drags being lost when the pointer crosses a pane boundary or leaves the reportable area.
+- Fixed mouse-wheel paging in full-screen AI sessions that handle their own scrolling. ([#854](https://github.com/Kuddev/pebrel/pull/854))
+- Fixed editor commands suggesting stale command history instead of files in the current directory. ([#847](https://github.com/Kuddev/pebrel/pull/847))
+- Fixed undeclared plugin Runtime calls reporting success when wrapped in `pcall`.
+- Fixed paired LAN and relay connections not being retained on Android. ([#855](https://github.com/Kuddev/pebrel/pull/855))
+- Fixed Android terminal input stopping when IME composition starts while viewing tmux history.
+- Fixed Android conversation refreshes resetting the reader.
+- Fixed closing a detached AI session leaving its terminal status running.
+- Fixed Windows launches from a directory ignoring the saved window size.
+- Fixed Windows PowerShell reporting the old working directory until the next command.
+- Fixed the Windows file tree becoming unresponsive while moving items to the Recycle Bin.
+- Fixed stale highlights after reloading a Markdown document.
+- Fixed top tabs sitting out of line with the native macOS window controls.
+- Fixed accent placement, uppercase subscripts, and matrix rows in rendered formulas.
+
+#### Improved
+
+- Improved sidebar mode with a centered hover grip for moving panes and the active pane name centered in the title area.
+- Improved fresh Android installs by defaulting to MintLight while keeping saved themes.
+- Improved the Android SSH overflow menu icon with solid dots.
+- Improved Settings with grouped cards, visible reset actions, and controls that wrap in narrow windows.
+- Improved Git history by showing full branch names on hover.
 
 ### 中文
 
@@ -78,31 +213,40 @@ macOS、Linux 和 Android 下载为预览版。
 
 #### 修复
 
-- 修复未捕获会话 ID 时无法恢复 OpenCode 会话的问题。 对应 [#651](https://github.com/Kuddev/nebula/issues/651)。
-- 修复已保存的 Antigravity 对话无法恢复的问题。 ([#852](https://github.com/Kuddev/pebrel/pull/852))
-- 修复 OpenCode 重复报告完成，以及未上报的权限回复造成虚假进度的问题。
+- 修复未捕获会话 ID 时无法恢复已保存 AI 会话的问题。 对应 [#651](https://github.com/Kuddev/nebula/issues/651)。
+- 修复使用保存的启动信息恢复 AI 对话失败的问题。 ([#852](https://github.com/Kuddev/pebrel/pull/852))
+- 修复 AI 重复报告完成，以及未上报的权限回复造成虚假进度的问题。
 - 修复无法观察窗格的终端复用器内 Agent 识别失败的问题。
 - 修复交互式 SSH 登录等待输入时标签一直转圈的问题。
 - 修复内置 SSH 会话空闲约一分钟无响应后被断开的问题。 对应 [#816](https://github.com/Kuddev/nebula/issues/816)。
-- 修复 JumpServer 直连登录后出现多余 `PEBREL_PTY` 输出的问题。 对应 [#856](https://github.com/Kuddev/nebula/issues/856)。
+- 修复直连 SSH 网关登录时显示内部 `PEBREL_PTY` 输出的问题。 对应 [#856](https://github.com/Kuddev/nebula/issues/856)。
 - 修复远程 `rz`、`sz` 导致窗格卡死的问题：现在会取消不支持的 ZMODEM 会话，并提示改用 scp 或 SFTP。 对应 [#806](https://github.com/Kuddev/nebula/issues/806)。
 - 修复 Windows 上每次按键鼠标指针都闪烁的问题。 对应 [#868](https://github.com/Kuddev/nebula/issues/868)。
 - 修复 Windows 上中日韩粗体和斜体文字显示成错误字形的问题。 对应 [#744](https://github.com/Kuddev/nebula/issues/744)。
 - 修复 macOS 上文件树图标显示为缺字方框的问题。 对应 [#870](https://github.com/Kuddev/nebula/issues/870)。
 - 修复 macOS 上 Cmd+M 无法最小化窗口的问题。 ([#814](https://github.com/Kuddev/pebrel/pull/814))
 - 修复指针越过窗格边界或离开可上报区域时，应用内鼠标拖动丢失的问题。
-- 修复全屏 Pi 中的鼠标滚轮翻页。 ([#854](https://github.com/Kuddev/pebrel/pull/854))
-- 修复 `nvim`、`code` 等编辑器命令补全到过期历史、而不是当前目录文件的问题。 ([#847](https://github.com/Kuddev/pebrel/pull/847))
+- 修复自行处理滚动的全屏 AI 会话无法用鼠标滚轮翻页的问题。 ([#854](https://github.com/Kuddev/pebrel/pull/854))
+- 修复编辑器命令补全显示过期历史而非当前目录文件的问题。 ([#847](https://github.com/Kuddev/pebrel/pull/847))
 - 修复插件用 `pcall` 包裹未声明的 Runtime 调用时仍报告成功的问题。
 - 修复 Android 未保留已配对的局域网和中转连接的问题。 ([#855](https://github.com/Kuddev/pebrel/pull/855))
 - 修复 Android 在查看 tmux 历史时开始输入法组字后终端输入中断的问题。
 - 修复 Android 刷新对话时阅读状态被重置的问题。
+- 修复关闭已分离的 AI 会话后，终端仍显示运行中的问题。
+- 修复在 Windows 上从目录启动时未使用已保存窗口尺寸的问题。
+- 修复 Windows PowerShell 切换目录后，直到下一条命令才上报新目录的问题。
+- 修复 Windows 文件树将项目移到回收站时界面无响应的问题。
+- 修复重新加载 Markdown 文档后仍显示旧高亮的问题。
+- 修复顶部标签与 macOS 原生窗口按钮对不齐的问题。
+- 修复公式渲染中的重音位置、大写变量下标和矩阵行。
 
 #### 改进
 
 - 改进侧栏模式：用居中的悬停手柄拖动窗格，活动窗格名称居中显示在标题区。
 - 改进 Android 全新安装：默认使用 MintLight，已保存的主题保持不变。
 - 改进 Android SSH 溢出菜单图标，改用实心圆点。
+- 改进设置页的分组卡片，直接显示恢复按钮，并让控件在窄窗口中自动换行。
+- 改进 Git 历史分支标签，悬停时显示完整分支名。
 
 ### Contributors
 
@@ -112,11 +256,12 @@ macOS、Linux 和 Android 下载为预览版。
   <a href="https://github.com/YinBuLiao"><img src="https://avatars.githubusercontent.com/u/35324248?v=4&amp;s=96" width="48" height="48" alt="YinBuLiao" title="YinBuLiao" /></a>
   <a href="https://github.com/onlynet"><img src="https://avatars.githubusercontent.com/u/21923781?v=4&amp;s=96" width="48" height="48" alt="onlynet" title="onlynet" /></a>
   <a href="https://github.com/eltociear"><img src="https://avatars.githubusercontent.com/u/22633385?v=4&amp;s=96" width="48" height="48" alt="eltociear" title="eltociear" /></a>
+  <a href="https://github.com/qingtianjun"><img src="https://avatars.githubusercontent.com/u/56997414?v=4&amp;s=96" width="48" height="48" alt="qingtianjun" title="qingtianjun" /></a>
 </p>
 
-Thanks to [Kuddev](https://github.com/Kuddev), [Aschenbath](https://github.com/Aschenbath), [YinBuLiao](https://github.com/YinBuLiao), [onlynet](https://github.com/onlynet), and [eltociear](https://github.com/eltociear).
+Thanks to [Kuddev](https://github.com/Kuddev), [Aschenbath](https://github.com/Aschenbath), [YinBuLiao](https://github.com/YinBuLiao), [onlynet](https://github.com/onlynet), [eltociear](https://github.com/eltociear), and [qingtianjun](https://github.com/qingtianjun).
 
-感谢 [Kuddev](https://github.com/Kuddev)、[Aschenbath](https://github.com/Aschenbath)、[YinBuLiao](https://github.com/YinBuLiao)、[onlynet](https://github.com/onlynet)、[eltociear](https://github.com/eltociear)。
+感谢 [Kuddev](https://github.com/Kuddev)、[Aschenbath](https://github.com/Aschenbath)、[YinBuLiao](https://github.com/YinBuLiao)、[onlynet](https://github.com/onlynet)、[eltociear](https://github.com/eltociear)、[qingtianjun](https://github.com/qingtianjun)。
 
 ## 2.4.0 - 2026-11-03
 
