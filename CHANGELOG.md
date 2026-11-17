@@ -4,6 +4,50 @@ Every release entry is provided in English and Simplified Chinese.
 
 每个版本条目均同时提供英文和简体中文说明。
 
+## 2.5.10 - 2026-11-17
+
+```text
+PENDING FINAL BUILD  Pebrel-v2.5.10-android-universal-preview.apk
+PENDING FINAL BUILD  Pebrel-v2.5.10-linux-x64-preview.AppImage
+PENDING FINAL BUILD  Pebrel-v2.5.10-linux-x64-preview.deb
+PENDING FINAL BUILD  Pebrel-v2.5.10-linux-x64-preview.tar.gz
+PENDING FINAL BUILD  Pebrel-v2.5.10-macos-arm64-preview.dmg
+PENDING FINAL BUILD  Pebrel-v2.5.10-macos-x64-preview.dmg
+PENDING FINAL BUILD  Pebrel-v2.5.10-relay-manual.tar.gz
+PENDING FINAL BUILD  Pebrel-v2.5.10-windows-arm64-setup.exe
+PENDING FINAL BUILD  Pebrel-v2.5.10-windows-arm64.zip
+PENDING FINAL BUILD  Pebrel-v2.5.10-windows-x64-setup.exe
+PENDING FINAL BUILD  Pebrel-v2.5.10-windows-x64.zip
+```
+
+### English
+
+macOS, Linux, and Android downloads are Preview builds.
+
+This build packages Pebrel main at upstream commit `1516ae67` together with the changes carried by this fork.
+
+#### Added
+
+- Added a name filter to the SSH Files browser that narrows the listing already on screen with case, whole-word, and regular-expression options, tells "no match" apart from an empty directory and an invalid pattern, and keeps the filtered listing visible while the next directory loads or fails to load. Entering a different directory clears the query.
+
+#### Fixed
+
+- Fixed restored windows opening on another display, or straddling two displays, when the displays use different scale factors.
+
+### 中文
+
+macOS、Linux 和 Android 下载为预览版。
+
+本版本包含上游 `1516ae67` 的 Pebrel main，以及本分支的两项改动。
+
+#### 新增
+
+- SSH 文件浏览器新增名称筛选：可按区分大小写、全词和正则表达式筛选已显示的目录，能区分「无匹配」「空目录」和「表达式无效」，并在下一个目录加载中或加载失败时保留屏幕上的筛选结果。进入其他目录会清空查询。
+
+#### 修复
+
+- 修复显示器缩放比例不同时，恢复的窗口出现在其他显示器或跨在两块显示器之间的问题。
+
 ## 2.5.0 - 2026-11-09
 
 ```text
